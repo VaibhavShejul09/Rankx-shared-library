@@ -2,7 +2,7 @@ def call(String serviceName){
     stage('Upadte the Helm Values'){
             script{
                withCredentials([string(credentialsId: 'git-token', variable: 'GIT_TOKEN')]) {
-               sh '''
+               sh """
                # Clone the repo
                 git clone https://github.com/VaibhavShejul09/rankx-environments.git
                 cd rankx-environments
@@ -26,7 +26,7 @@ def call(String serviceName){
                 git add values.yaml
                 git commit -m "Update image tag to $IMAGE_TAG"
                 git push origin main
-                '''    
+                """    
                 } 
             }
         }
