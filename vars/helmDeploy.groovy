@@ -14,7 +14,7 @@ def call(String serviceName) {
                          --namespace $ENVIRONMENT \
                          --create-namespace \
                          --atomic --wait \
-                         --timeout 5m --debug
+                         --timeout 8m --debug
 
                    """
                
