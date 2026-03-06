@@ -1,6 +1,6 @@
 def call(String serviceName) {
     stage('Checkout Helm Charts & deploy') {
-                steps {
+                script {
                   withCredentials([string(credentialsId: 'git-token', variable: 'GIT_TOKEN')]) {
                     sh '''
                          # Clean previous helm repo folder
@@ -22,4 +22,5 @@ def call(String serviceName) {
                
              }
         }
+    }
 }

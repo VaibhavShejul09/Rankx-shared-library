@@ -1,7 +1,7 @@
 def call(String serviceName){
     stage('Upadte the Helm Values'){
-            steps{
-                withCredentials([string(credentialsId: 'git-token', variable: 'GIT_TOKEN')]) {
+            script{
+               withCredentials([string(credentialsId: 'git-token', variable: 'GIT_TOKEN')]) {
                sh '''
                # Clone the repo
                 git clone https://github.com/VaibhavShejul09/rankx-environments.git
