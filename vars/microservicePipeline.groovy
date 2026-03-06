@@ -42,13 +42,13 @@ stage('Package') {
 
 stage('Docker Build') {
     steps {
-        dockerBuild(DOCKER_IMAGE)
+        dockerBuild(config.dockerImage)
     }
 }
 
 stage('Docker Push') {
     steps {
-        dockerPush(DOCKER_IMAGE)
+        dockerPush(config.dockerImage)
     }
 }
 
