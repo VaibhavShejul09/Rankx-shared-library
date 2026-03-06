@@ -4,9 +4,6 @@ pipeline {
 
 agent any
 
-environment {
-    DOCKER_IMAGE = config.dockerImage
-}
 
 stages {
 
