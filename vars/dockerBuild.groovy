@@ -1,7 +1,5 @@
 def call(String image) {
 
-stage('Build Docker Image') {
-
     script {
 
         def tag = "${env.BUILD_NUMBER}-${env.GIT_COMMIT.take(7)}"
@@ -10,7 +8,4 @@ stage('Build Docker Image') {
         sh "docker build -t ${image}:${tag} ."
 
     }
-
-}
-
 }

@@ -1,6 +1,4 @@
 def call(){
-    stage('Set Environment Based on Branch') {
-
     script {
 
         def branchMap = [
@@ -17,7 +15,5 @@ def call(){
 
         echo "Branch: ${env.BRANCH_NAME}"
         echo "Deploying to namespace: ${env.ENVIRONMENT}"
-    }
-
-  }   
+    }   
 }

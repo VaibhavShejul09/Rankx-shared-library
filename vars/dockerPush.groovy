@@ -1,6 +1,6 @@
 def call(String image) {
 
-stage('Push to DockerHub') {
+script {
 
     withCredentials([usernamePassword(
         credentialsId: 'dockerhub',
