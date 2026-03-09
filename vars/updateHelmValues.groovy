@@ -4,7 +4,7 @@ def call(String serviceName){
                sh """
                # Clone the repo
                 git clone https://github.com/VaibhavShejul09/rankx-environments.git
-                cd rankx-environments/services
+                cd rankx-environments
 
                 # Configure Git author
                 git config user.email "ci@jenkins.com"
@@ -16,7 +16,7 @@ def call(String serviceName){
                 # IMPORTANT: Pull latest
                 git pull origin main
 
-                cd $ENVIRONMENT/${serviceName}
+                cd $ENVIRONMENT/services/${serviceName}
 
                 # Update values.yaml
                 sed -i "s/tag:.*/tag: \\"$IMAGE_TAG\\"/" values.yaml
