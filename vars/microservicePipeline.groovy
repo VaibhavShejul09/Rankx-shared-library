@@ -66,13 +66,13 @@ stage('Manual Approval for Prod') {
         }
     }
 }
-
+/*
 stage('Deploy') {
     steps {
         helmDeploy(config.serviceName)
     }
 }
-
+*/
 }
 
 }
