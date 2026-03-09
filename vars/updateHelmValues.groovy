@@ -4,7 +4,7 @@ def call(String serviceName){
                sh """
                # Clone the repo
                 git clone https://github.com/VaibhavShejul09/rankx-environments.git
-                cd rankx-environments
+                cd rankx-environments/services
 
                 # Configure Git author
                 git config user.email "ci@jenkins.com"
